@@ -4,6 +4,7 @@ import models.BoursiersLoges;
 import models.Chambre;
 import models.Etudiant;
 import models.Pavillon;
+import models.TypeChambre;
 
 public interface IService {
     public void addPavillon(Pavillon pavillon);
@@ -11,17 +12,14 @@ public interface IService {
     public void listerPavillon();
 
     public void listerChambreDunPavillon(Pavillon pavillon);
-
     public void addChambre(Chambre chambre);
     public void listerChambre();
     public void archiverChambre(Chambre chambre);
-
     public void addEtudiant(Etudiant etudiant);
-
     public void listerEtudiantChambre(Chambre chambre);
-
+    public void listerTypeChambre();
+    public void addTypeChambre(TypeChambre typeChambre);
     public void affecterChambrePavillon(Chambre chambre,Pavillon pavillon);
-
-    public void affecterChambreBoursierLoge(Chambre chambre,BoursiersLoges BoursiersLoges);
+    public void affecterChambreBoursierLoge(Chambre chambre,BoursiersLoges boursiersLoges);
 
 }

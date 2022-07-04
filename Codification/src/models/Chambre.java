@@ -3,16 +3,9 @@ package models;
 public class Chambre {
     private int id;
     private int numEtage;
-    private String numChambre;
+    private int numChambre;
     private TypeChambre type;
     private Pavillon pavillon;
-
-    
-
-    
-    
-    // type=individual or a deux
-
 
     public Pavillon getPavillon() {
         return pavillon;
@@ -30,11 +23,11 @@ public class Chambre {
         this.type = type;
     }
 
-    public String getNumChambre() {
+    public int getNumChambre() {
         return numChambre;
     }
 
-    public void setNumChambre(String numChambre) {
+    public void setNumChambre(int numChambre) {
         this.numChambre = numChambre;
     }
 
@@ -52,5 +45,14 @@ public class Chambre {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Chambre [id=" + id + ", numChambre=" + numChambre + ", numEtage=" + numEtage + ", pavillon=" + pavillon.getIdpav()
+                + ", type=" + type + "]";
+    }
+
+    public void setPavillon(int numPav) {
     }
 }

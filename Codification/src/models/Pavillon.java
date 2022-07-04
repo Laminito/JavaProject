@@ -1,7 +1,15 @@
 package models;
 
 public class Pavillon {
-    private int id;
+    public int idpav;
+    public int getIdpav() {
+        return idpav;
+    }
+
+    public void setIdpav(int idpav) {
+        this.idpav = idpav;
+    }
+
     private int nbreDetages;
     private int numPav;
 
@@ -22,16 +30,10 @@ public class Pavillon {
         this.nbreDetages = nbreDetages;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     @Override
     public String toString() {
-        return "Pavillon [id=" + id + ", nbreDetages=" + nbreDetages + ", numPav=" + numPav + "]";
+        return "Pavillon [idpav=" + idpav + ", nbreDetages=" + nbreDetages + ", numPav=" + numPav + "]";
     }
+
+ 
 }
